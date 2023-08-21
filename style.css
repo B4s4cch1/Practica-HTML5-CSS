@@ -1,0 +1,129 @@
+#backgroundI{
+    height: 675px;
+    background:linear-gradient(to right, hsla(54, 71%, 89%, 0.953),hsla(179, 61%, 51%, 0.897)),url(Background.jpg);
+}
+
+.nav{
+    position: sticky;
+    margin: 10px auto;
+    text-align: center;
+    background-color:hsla(54, 71%, 89%, 0.788);
+    padding: 2px;
+    border: 1px solid #0a516d;
+}
+
+.ref{
+    text-decoration: none;
+}
+
+.ref:hover{
+    color: #6bb39b;
+}
+
+#divName{
+    margin: 10px auto;
+    text-align: center;
+    background-color: #27b1bf;
+    padding: 1px;
+    border: 1px solid #0a516d;
+    color: #2b2726;
+}
+
+.divSec{
+    height: auto;
+    width:fit-content;
+    text-align: left;
+    background-color: #c2e4cb;
+    padding: 5px;
+    border: 1px solid black;
+    color: #176585;
+}
+
+#divSec1{
+    position: absolute;
+    margin: 10px 10px;
+    height: fit-content;
+}
+
+#divSec2{
+    position:relative;
+    border-radius: 10%;
+    margin: 20px 540px;
+}
+
+#divSec3{
+    position:relative;
+    margin-top: -170px;
+    margin-left: 750px;
+}
+
+#divSec4{
+    position:relative;
+    margin: 80px 10px;
+}
+
+#divSec5{
+    position:relative;
+    font-style: italic;
+    margin-top: -270px;
+    margin-left: 780px;
+}
+
+#tesla{
+    height: 250px;
+    position:relative;
+    margin-left: 180px;
+}
+
+#backgroundF{
+    background-color: #daf3ea;
+    height: 675px;
+    text-align: center;
+}
+
+#divFormP{
+    width:max-content;
+    margin: 30px auto;
+    background-color: #6bb39b;
+    padding: 10px;
+    color: #0b0b0d;
+    align-self: center;
+    border: 1px solid black ;
+}
+
+.divForm{
+    text-align: center;
+    width:max-content;
+    margin-top: 20px;
+    background-color: #85e6c0;
+    padding: 10px;
+    color: #0b0b0d;
+    align-self: center;
+    border: 1px solid black ;
+}
+
+#submitBtn{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.footer{
+    position: static;
+    margin-top: 0px;
+    width: 500px;
+    text-align: center;
+    background-color:hsla(54, 71%, 89%, 0.788);
+    padding: 2px;
+    border: 1px solid #0a516d;
+}
+/*.color1 { #f7f3cf };
+.color2 { #c2e4cb };
+.color3 { #36cecc };
+.color4 { #27b1bf };
+.color5 { #176585 };
+
+.color6 { #f7f4e8 };
+.color7 { #daf3ea };
+.color8 { #85e6c0 };
+.color9 { #6bb39b };
+.color10 { #0b0b0d };
