@@ -1,3 +1,5 @@
+<?php include("conexion.php") ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +13,7 @@
     <div class="nav">
         <a href="index.html" class="ref">Pagina principal</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="formulario.html" class="ref">Formulario</a>
+        <a href="formulario.php" class="ref">Formulario</a>
     </div>
     <div id="divFormP">
     <form method="get" target="_self" id="form">
@@ -31,5 +33,12 @@
     </form>
     </div>
     </div>
+    <?php
+    if($miConexion){
+        $echo="Conexion exitosa";
+    }else{
+        $echo="Conexión fallida";
+    }
+    ?>
 </body>
 </html>
