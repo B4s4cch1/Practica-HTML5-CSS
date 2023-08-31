@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require('conexion.php');?>
+<?php require('conexion.php'); require('store.php');?>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,8 @@
         <a href="formulario.php" class="ref">Formulario</a>
     </div>
     <div id="divFormP">
-    <form method="post" id="form">
+        
+    <form action="store.php" method="post" id="form">
         <div id="nameId" class="divForm"><label>Nombre:<input type="text" name="name" placeholder="Nombre"></label><br></div>
         <div id="mailId" class="divForm"><label>Correo:<input type="mail" name="mail" placeholder="Correo"></label> <br></div>
         <div id="genreId" class="divForm">Genero: <label><input type="radio" name="genre" value="hombre" checked>Hombre</label> <label><input type="radio" name="genre" value="mujer">Mujer</label><br></div>
@@ -27,7 +28,7 @@
             <option value="value3"> Zapopan</option>
             <option value="value1"> Tonalá</option>
         </select></label><br></div>
-        <div id="hireId" class="divForm"><label>Me interesa contratarte:<input type="checkbox" name="hire"></label> <br></div>
+        <!--<div id="hireId" class="divForm"><label>Me interesa contratarte:<input type="checkbox" name="hire"></label> <br></div>-->
         <div id="submit" class="divForm"><label><button type="submit" name="send"> Enviar</button></label></div>
     </form>
     </div>
@@ -35,25 +36,7 @@
     
     <?php
     if($miConexion){
-    if (isset($_POST['send'])){
-    if(strlen($_POST['name']) >= 1 &&  strlen($_POST['mail']) >= 1 && strlen($_POST['genre']) >= 1 && strlen($_POST['passwd']) >= 1  && strlen($_POST['textArea'] && strlen($_POST['city']) >= 1 )){
-        $name=trim($_POST['name']);
-        $mail=trim($_POST['mail']);
-        $genre=trim($_POST['genre']);
-        $passwd=trim($_POST['passwd']);
-        $comment=trim($_POST['textArea']);
-        $city=trim($_POST['city']);
-        if(isset($_POST['hire'])){
-        $hire=trim($_POST['hire']);
-        }
-        if(isset($hire)){ 
-        $consulta = "INSERT INTO information (name,mail,genre,password,comment,interested,city) VALUES ('$name','$mail','$genre','$passwd','$comment','$hire','$city')";
-        }else{
-        $consulta = "INSERT INTO information (name,mail,genre,password,comment,city) VALUES ('$name','$mail','$genre','$passwd','$comment','$city')";
-        }
-        $miConexion->exec($consulta);
-
-
+   
         /*if($resultado) {
             ?>
             <h3 class="ok"> Dato insertado correctamente </h3>
@@ -83,9 +66,7 @@
         <?php 
     }    
 
-    //header("Location: formulario.php");
-    }//Si se apretó el botón
-    }
+
     ?>
     
 </body>
